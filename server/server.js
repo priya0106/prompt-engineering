@@ -16,8 +16,11 @@ app.post('/generate-prompt', async (req, res) => {
   const { userInput, desiredOutput } = req.body;
 
   const metaPrompt = `
-You are a prompt engineer. Based on the input: "${userInput}" and expected output: "${desiredOutput}", generate 3 clear, effective prompts for an AI system.
-`;
+      you are an expert prompt engineer helping users craft effective prompts for LLMs like chatGPT. Your task is to convert a user's raw requirement into a clear, structured and optimized prompt. 
+      Focus on clarity, completeness and tas intent. Tailor the output prompt to be directly usable in tools like ChatGPT, Github copilot or similar. Use precise language. Do not perform the task; only generate a great prompt. 
+      Here's the reqirement: input: "${userInput}" and expected output: "${desiredOutput}". 
+      Now generate an effective prompt the user csn use in an LLM.
+    `;
 
   try {
     const response = await axios.post(

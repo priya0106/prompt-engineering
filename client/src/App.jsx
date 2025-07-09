@@ -26,16 +26,15 @@ function App() {
   return (
     <div className="App">
       <div className="prompt-generator">
-      <h1>🎯 Prompt Generator</h1>
+      <h1>Effective Prompt Generator</h1>
       <textarea placeholder="Enter input/context..." value={input} onChange={e => setInput(e.target.value)} />
       <textarea placeholder="Expected output..." value={output} onChange={e => setOutput(e.target.value)} />
       <button onClick={generatePrompt} disabled={loading}>
         {loading ? 'Generating...' : 'Generate Prompt'}
       </button>
-
-      <ul>
-        {prompts.map((p, i) => <li key={i}><pre>{p}</pre></li>)}
-      </ul>
+      <div>
+        {prompts.map((p, i) => <li className="list-items" key={i}><span>{p}</span></li>)}
+      </div>
       </div>
     </div>
   );

@@ -2,12 +2,12 @@
   max-width: 700px;
   margin: auto;
   text-align: center;
-  font-family: sans-serif;
+  font-family: math;
   padding: 2rem;
   display: flex;
   justify-content: center; /* Horizontal centering */
   align-items: center; 
-  height: 100vh;
+  /* height: 100vh; */
 
 }
 
@@ -30,4 +30,10 @@ pre {
   padding: 10px;
   text-align: left;
   border-radius: 6px;
+}
+
+.list-items {
+  display: block;
+  padding-top: 15px;
+  font-weight: bold;
 }
