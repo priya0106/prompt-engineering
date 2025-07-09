@@ -32,6 +32,11 @@ pre {
   border-radius: 6px;
 }
 
+.prompt-text {
+  text-align: justify;
+  align-items: center;
+}
+
 .list-items {
   display: block;
   padding-top: 15px;

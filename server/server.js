@@ -13,12 +13,12 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.post('/generate-prompt', async (req, res) => {
-  const { userInput, desiredOutput } = req.body;
+  const { userInput } = req.body;
 
   const metaPrompt = `
       you are an expert prompt engineer helping users craft effective prompts for LLMs like chatGPT. Your task is to convert a user's raw requirement into a clear, structured and optimized prompt. 
       Focus on clarity, completeness and tas intent. Tailor the output prompt to be directly usable in tools like ChatGPT, Github copilot or similar. Use precise language. Do not perform the task; only generate a great prompt. 
-      Here's the reqirement: input: "${userInput}" and expected output: "${desiredOutput}". 
+      Here's the reqirement: "${userInput}". 
       Now generate an effective prompt the user csn use in an LLM.
     `;
 
